@@ -3,7 +3,11 @@ import shutil
 
 def copy_file(command: str) -> None:
     try:
-        source_file_name, target_file_name = command[3:].split(" ")
+        copy_command, source_file_name, target_file_name = command.split(" ")
+
+        if copy_command != "cp":
+            print(f"Command {copy_command} is not supported yet")
+            return
 
         try:
             if source_file_name != target_file_name:
