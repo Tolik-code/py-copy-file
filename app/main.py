@@ -3,7 +3,8 @@ import shutil
 
 def copy_file(command: str) -> None:
     try:
-        if len(command.split(" ")) != 3: #additional check, for tests AI buddy
+        # additional check, for tests AI buddy
+        if len(command.split(" ")) != 3:
             raise ValueError
 
         copy_command, source_file_name, target_file_name = command.split(" ")
